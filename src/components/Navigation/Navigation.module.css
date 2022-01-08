@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid salmon;
+  padding: 20px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1px 1px salmon;
+  border-radius: 5px;
+}
+
+.link {
+  font-size: 20px;
+}
+
+.link:hover {
+  color: #ffff00;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120px;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.name {
+  margin-right: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.userWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 4px;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    width: 250px;
+  }
+}
