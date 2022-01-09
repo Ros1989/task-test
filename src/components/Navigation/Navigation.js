@@ -8,6 +8,9 @@ const Navigation = () => (
     <NavLink className={s.link} to="/">
       <IoHome size="22" />
     </NavLink>
+    <NavLink className={s.link} to="/private">
+      Private page
+    </NavLink>
   </nav>
 );
 

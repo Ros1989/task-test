@@ -5,11 +5,12 @@ import AppBar from './components/Navigation/AppBar';
 import HomeView from './views/HomeView';
 import RegisterView from './views/RegisterView';
 import LoginView from './views/LoginView';
+import PrivatePageView from './views/PrivatePageView';
 import { authOperations } from './redux/auth';
 import { connect } from 'react-redux';
 
 class App extends Component {
-  //логика для рефреша
+  // рефреш
   componentDidMount() {
     this.props.onGetCurrentUser();
   }
@@ -21,6 +22,7 @@ class App extends Component {
           <AppBar />
           <Switch>
             <Route exact path="/" component={HomeView} />
+            <Route path="/private" component={PrivatePageView} />
             <Route path="/register" component={RegisterView} />
             <Route path="/login" component={LoginView} />
           </Switch>
@@ -29,6 +31,8 @@ class App extends Component {
     );
   }
 }
+
+//рефреш
 
 const mapDispatchToProps = {
   onGetCurrentUser: authOperations.getCurrentUser,
