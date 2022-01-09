@@ -8,7 +8,7 @@ const HomeView = () => (
     <Section>
       <div className={s.wrapper}>
         <h1 className={s.title}>Welcome!!!</h1>
-        <p className={s.description}>This is a test application</p>
+        <p className={s.description}>This is the home page</p>
       </div>
     </Section>
   </Container>
