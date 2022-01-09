@@ -6,6 +6,7 @@ import { authOperations } from './redux/auth';
 import { connect } from 'react-redux';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
+import Loader from 'react-loader-spinner';
 
 const HomeView = lazy(() => import('./views/HomeView'));
 const RegisterView = lazy(() => import('./views/RegisterView'));
@@ -23,7 +24,13 @@ class App extends Component {
       <>
         <Container>
           <AppBar />
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <Loader type="Rings" color="#00BFFF" height={80} width={80} />
+              </div>
+            }
+          >
             <Switch>
               <PublicRoute exact path="/" component={HomeView} />
               <PrivateRoute
